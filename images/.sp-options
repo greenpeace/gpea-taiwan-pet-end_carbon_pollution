@@ -1,0 +1,8 @@
+[SHORTPIXEL]
+lossy=1
+keep_exif=0
+cmyk2rgb=1
+resize=0
+convertto=""
+backup_path="../images-bak"
+exclude=""
