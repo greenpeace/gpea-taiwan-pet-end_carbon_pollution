@@ -6,6 +6,10 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "currency-formatter": "^1.5.7",
+    "dayjs": "^1.10.4",
+    "ftps": "^1.1.1",
+    "mailcheck": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -13,9 +17,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "PUBLIC_URL=https://change.greenpeace.org.tw/2021/petition/zh-TW.2021.climate.end_carbon_pollution.signup react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn run build && node mc-deploy.js "
   },
   "eslintConfig": {
     "extends": [
