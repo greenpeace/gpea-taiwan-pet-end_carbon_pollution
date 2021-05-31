@@ -585,7 +585,7 @@ input[type="button"] {
   max-width: 540px;
   margin: auto;
   width: 90%;
-  padding-top: 13.63636364%;
+  padding-top: 10%;
   padding-bottom: 13.63636364%;
 }
 @media (max-width: 1440px) {

@@ -35,6 +35,7 @@ label.error, .email-suggestion {
 
 #sign {
   position: relative;
+  min-height: 100vh;
 }
 
 .loading-cover {
@@ -71,4 +72,24 @@ option {
 #mc-form-section {
   height: 0;
   overflow: hidden;
+}
+
+#birth-year {
+  height: 42px;
+}
+
+.done__btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.line-share-section {
+  font-size: 1.5rem;
+  line-height: 1.55555556em;
+  color: #FFF9BE;
+  letter-spacing: 0.075em;
+}
+@media (max-width: 767px) {
+  #birth-year {
+    height: auto;
+  } 
 }
