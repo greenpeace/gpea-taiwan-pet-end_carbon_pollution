@@ -90,10 +90,18 @@ input[type="button"] {
   padding: 0 1em;
   box-sizing: border-box;
   color: white;
-  background-color: #E97441;
+  background-color: #ff8100;
   border: none;
-  border-radius: 1.45em;
+  border-radius: 4px;
   letter-spacing: 0.125em;
+}
+.btn:hover {
+  color: white;
+  background-color: #ffb660;
+}
+.btn:active {
+  border: none;
+  background-color: #e96d00;
 }
 @media (max-width: 1440px) {
   .btn {
