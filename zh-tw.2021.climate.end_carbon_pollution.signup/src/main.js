@@ -80,7 +80,7 @@ const initProgressBar = () => {
 
     // console.log("progress bar")
     // const goal = document.querySelector('[name="numSignupTarget"]').value;
-    let goal = (Math.floor(progressNow / 5000) + 1) * 5000;
+    let goal = (Math.floor(progressNow / 5000) + 2) * 5000;
     // console.log($('#mc-form'))
     // console.log(goal)
     // console.log(current)
