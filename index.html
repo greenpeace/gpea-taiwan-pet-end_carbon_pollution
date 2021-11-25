@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="wrap">
-      <nav class="nav"> 
+      <nav class="nav">
         <div class="nav__cover"></div>
         <h2 class="hide-title">Navigation</h2>
         <ul class="nav__list">
@@ -53,13 +53,14 @@
           </div>
         </div>
         <div class="kv__sign sign" id="sign">
-          <div class="sign__inner sign__inner--form" id="signForm" data-aos="fade-down">
+          <div class="sign__inner sign__inner--form" id="signForm" data-aos="fade-down" data-aos-anchor="#sign" data-aos-anchor-placement="top-bottom">
             <h2 class="sign__title">SIGN UP</h2>
-            <p class="sign__intro">今年是溫管法修法關鍵年，臺灣若要終結碳污染，就必須要有好的減碳政策， 才能趕上國際低碳治理潮流。立即連署，要求政府制定有效碳定價，承諾<strong>2050年淨零碳排！</strong></p>
+            <p class="sign__intro">現在，是溫管法修法的黃金時刻！</p>
+            <p class="sign__intro">唯有制定有效碳定價，讓碳排大戶付出應有的環境成本，才能加速臺灣邁向<strong>2050年淨零碳排</strong>的腳步。加入連署，由綠色和平代您向環保署遞交碳定價政策意見。當萬人齊聲，改變就能成真。</p>
             <form class="sign__form form" action="">
               <ul class="form__list">
                 <li class="form__item">
-                  <div class="form__field"> 
+                  <div class="form__field">
                     <label class="form__label form__label--required">電子信箱</label>
                     <input class="form__input" autocomplete="email" type="email" required>
                   </div>
@@ -77,13 +78,13 @@
                   </div>
                 </li>
                 <li class="form__item">
-                  <div class="form__field"> 
+                  <div class="form__field">
                     <label class="form__label form__label--required">出生年月日(格式:yymmdd,如:701006)</label>
                     <input class="form__input" type="text" required>
                   </div>
                 </li>
                 <li class="form__item">
-                  <div class="form__field"> 
+                  <div class="form__field">
                     <label class="form__label form__label--required">電話</label>
                     <input class="form__input" type="tel" autocomplete="tel" required>
                   </div>
@@ -97,7 +98,7 @@
               </ul>
             </form>
             <p class="form__control">
-              <button class="form__btn btn hover" id="submitForm" type="submit">立即連署</button>
+              <button class="form__btn btn" id="submitForm" type="submit">立即連署</button>
             </p>
           </div>
           <div class="sign__inner sign__inner--thanks done" id="signDone" style="display: none;">
@@ -105,7 +106,7 @@
               <h2 class="sign__title">THAMK YOU !</h2>
               <p class="done__intro">
                 <strong>感謝您加入連署，<br class="pc-hide">一同為臺灣的氣候未來開創新局！</strong><br><br>過去為了經濟發展，我們常常忽略環境成本，恣意的用電生產，卻沒有把用電產生的碳排放、空氣污染也計入成本，這些環境成本一直以來是由全民承擔，綠色和平相信，唯有制定有效碳定價，將長期被忽視的外部成本內部化，才有可能終結碳污染，創造經濟與環境的雙贏。
-                <br><br><br><a class="done__btn btn hover" href="https://supporter.ea.greenpeace.org/tw/s/donate" target="_blank">支持我們</a><br><br><br>邀請您多走一步，將連署分享給您的親朋好友，一同壯大臺灣關注氣候與環境的聲音！
+                <br><br><br><a class="done__btn btn" href="https://supporter.ea.greenpeace.org/tw/s/donate" target="_blank">支持我們</a><br><br><br>邀請您多走一步，將連署分享給您的親朋好友，一同壯大臺灣關注氣候與環境的聲音！
                 <br><br><br><span class="done__control">分享至：<a class="done__share hover" id="shareFB" href="#" title="分享至 FACEBOOK" target="_blank"><span class="fb-icon"></span></a><a class="done__share hover" id="shareLINE" href="#" title="分享至 LINE" target="_blank"> <span class="line-icon"></span></a></span>
               </p>
             </div>
@@ -115,7 +116,7 @@
       <section class="sec policy" id="appeal">
         <div class="sec__inner" data-aos="fade-down" data-aos-anchor-placement="center-bottom">
           <div class="policy__body">
-            <div class="policy__main"> 
+            <div class="policy__main">
               <h2 class="policy__title sec__title">氣候政策新篇章</h2>
               <p class="policy__desc sec__desc">
                 過去五年，溫管法因管制力不足、權責不明，<strong>讓臺灣減碳進度近乎停滯。</strong><br><br>今年是溫管法修法的關鍵年，<strong>綠色和平呼籲政府在此次修法中，應將以下四項訴求納入法條：</strong></p>
@@ -166,8 +167,8 @@
               您的連署支持，將有助於綠色和平的遊說工作<br>確保臺灣能追上國際減碳腳步
               <br>以有效、完備的法律達成經濟與環境的雙贏！
             </p>
-            <p class="call__btns"><a class="call__btn hover" id="goSignUp" href="#">前往連署</a>
-              <!-- PDF 連結--><a class="call__btn call__btn--light hover" href="" target="_blank">完整修法建言</a>
+            <p class="call__btns"><a class="call__btn" id="goSignUp" href="#">前往連署</a>
+              <!-- PDF 連結--><a class="call__btn call__btn--light" href="" target="_blank">完整修法建言</a>
             </p>
           </div>
         </div>
@@ -190,6 +191,21 @@
         </div>
       </footer>
     </div>
+    <div class="lightbox">
+      <div class="bg-trasitonblack"></div>
+      <div class="lightbox__wrap">
+        <div class="lightbox__inner">
+          <a class="lightbox-close" href="" title="close">
+            <span class="lightbox-close-icon"></span>
+          </a>
+          <h2 class="lightbox__title">【NEW】最後30天，決定臺灣有效碳定價</h2>
+          <p class="lightbox__text">環保署已於 10/21 公告溫管法修法草案，然而，環保署的碳費機制缺乏減碳和經濟的有效性，草案公告 60 天內，綠色和平需要號召 5000 位民眾一同向環保署遞交修法建議，要求「碳底價從10美元起徵，逐年調升至少10%以跟上國際水準」明確寫入法條內，以避免環保署未來訂出無效碳費。</p>
+          <p class="lightbox__text"><b>您是否願意成為 5000 分之 1 的力量，讓有效碳定價成為臺灣的減碳利器？</b></p>
+          <br>
+          <p class="lighbox-btnwrap"><a class="lighbox-btn" href="#sign">我願意！</a></p>
+        </div>
+      </div>
+    </div>
     <script>
       $(document).ready(function(){
         if($(window).width()<=780){
@@ -204,21 +220,21 @@
           nowScroll = $(window).scrollTop();
           $('.menu-btn, .nav').toggleClass('opened');
           if($('.nav').hasClass('opened')){
-      
+
             $('body').addClass('noscroll');
           }else{
             $('body').removeClass('noscroll');
             $(window).scrollTop(nowScroll);
           }
         });
-      
+
         $('.nav__link').on('click', function(e){
           e.preventDefault();
           var goto = $(this).attr('href');
           $('html, body').animate({scrollTop: $(goto).offset().top});
           $('.menu-btn').trigger('click');
         });
-      
+
         //送出表單後
         $('#submitForm').on('click', function(e){
           //e.preventDefault();
@@ -226,34 +242,48 @@
           $('#signDone').fadeIn();
           $('html, body').scrollTop($('#signDone').offset().top);
         });
-      
+
         var url = location.href;
         //若此規則無法取得正確分享網址，請直接把網址寫進 url
         $('#shareFB').attr('href', 'https://www.facebook.com/sharer/sharer.php?u='+url);
         $('#shareLINE').attr('href', 'https://lineit.line.me/share/ui?url='+url);
-      
-      
+
+
         // progress bar
         var nowSign = Number($('.kv__bar').attr('data-now'));
         $('.kv__num').text(nowSign);
         var goal = Number($('.kv__bar').attr('data-all'));
         var percent = Math.round(nowSign/goal*100);
         $('.kv__bar-fill').css('width', percent + '%');
-      
-      
+
+
         //scroll to
         $('#goSignUp').on('click', function(e){
           e.preventDefault();
           $('html, body').animate({scrollTop: 0}, 600);
         });
-      
+
         AOS.init({
           duration: 550,
           anchorPlacement: 'center-bottom'
         });
-      
+
+        // lightbox
+        $('.lightbox').fadeIn(100);
+
+        $('.lightbox-close, .bg-trasitonblack').on("click",function(e){
+          e.preventDefault();
+          $('.lightbox').fadeOut(100);
+        });
+
+        $('.lighbox-btn').on("click",function(e){
+          e.preventDefault();
+          $('.lightbox').fadeOut(100);
+          var hash = $(this).attr("href");
+          $('html,body').animate({ scrollTop:$(hash).offset().top}, 800);
+        });
       });
-          
+
     </script>
   </body>
 </html>
