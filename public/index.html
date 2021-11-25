@@ -109,18 +109,18 @@
               <li class="form__item">
                 <div class="form__field">
                   <label class="form__label form__label--required">電子信箱</label>
-                  <input class="form__input" type="email" name="email" id="email" required>
+                  <input class="form__input" type="email" name="email" id="email" autocomplete="email" required>
                 </div>
               </li>
               <li class="form__item">
                 <div class="form__group">
                   <div class="form__field form__field--s">
                     <label class="form__label form__label--required">姓氏</label>
-                    <input class="form__input" type="text" name="last-name" id="last-name" required>
+                    <input class="form__input" type="text" name="last-name" id="last-name" autocomplete="family-name" required>
                   </div>
                   <div class="form__field form__field--m">
                     <label class="form__label form__label--required">名字</label>
-                    <input class="form__input" type="text" name="first-name" id="first-name" required>
+                    <input class="form__input" type="text" name="first-name" id="first-name" autocomplete="given-name" required>
                   </div>
                 </div>
               </li>
@@ -133,7 +133,7 @@
               <li class="form__item">
                 <div class="form__field">
                   <label class="form__label form__label--required">電話</label>
-                  <input class="form__input" type="tel" name="mobile" id="mobile" required>
+                  <input class="form__input taiwan-phone" type="tel" name="mobile" id="mobile" autocomplete="tel" required>
                 </div>
               </li>
               <li class="form__item">
@@ -149,18 +149,37 @@
             <button class="form__btn btn hover" id="submitForm" type="submit">立即連署</button>
           </p>
         </div>
+        <!-- thank you section -->
         <div class="sign__inner sign__inner--thanks done" id="signDone" style="display: none;">
           <div class="done__content">
             <h2 class="sign__title">THANK YOU !</h2>
             <p class="done__intro">
-              <strong>感謝您加入連署，<br
-                  class="pc-hide">一同為臺灣的氣候未來開創新局！</strong><br><br>過去為了經濟發展，我們常常忽略環境成本，恣意的用電生產，卻沒有把用電產生的碳排放、空氣污染也計入成本，這些環境成本一直以來是由全民承擔，綠色和平相信，唯有制定有效碳定價，將長期被忽視的外部成本內部化，才有可能終結碳污染，創造經濟與環境的雙贏。
-              <br><br><br><a class="done__btn btn hover"
-                href="https://supporter.ea.greenpeace.org/tw/s/donate/?campaign=climate&ref=2021-climate-government_set_carbon_price_thankyoupage"
-                target="_blank">支持我們</a><br><br><br>邀請您多走一步，將連署分享給您的親朋好友，一同壯大臺灣關注氣候與環境的聲音！
-              <br><br><br><span class="done__control">分享至：<a class="done__share hover" id="shareFB" href="https://www.facebook.com/sharer/sharer.php?u=https://act.gp/3tBaGYm"
-                  title="分享至 FACEBOOK" target="_blank"><span class="fb-icon"></span></a><a class="done__share hover"
-                  id="shareLINE" href="https://social-plugins.line.me/lineit/share?url=https://act.gp/3tywow9" title="分享至 LINE" target="_blank"> <span class="line-icon"></span></a></span>
+              <strong>感謝您加入連署，
+                <br class="pc-hide">
+                一同為臺灣的氣候未來開創新局！
+              </strong><br><br>
+                過去為了經濟發展，我們常常忽略環境成本，恣意的用電生產，卻沒有把用電產生的碳排放、空氣污染也計入成本，這些環境成本一直以來是由全民承擔，綠色和平相信，唯有制定有效碳定價，將長期被忽視的外部成本內部化，才有可能終結碳污染，創造經濟與環境的雙贏。
+                <br>
+              <a class="done__btn hide-on-dd btn hover" href="https://supporter.ea.greenpeace.org/tw/s/donate/?campaign=climate&ref=2021-climate-government_set_carbon_price_thankyoupage" target="_blank">
+                支持我們
+              </a>
+              <br>邀請您多走一步，將連署分享給您的親朋好友，一同壯大臺灣關注氣候與環境的聲音！
+              <br><br><br>
+              <span class="done__control hide-on-dd">分享至：<a class="done__share hover" id="shareFB" href="https://www.facebook.com/sharer/sharer.php?u=https://act.gp/3tBaGYm" title="分享至 FACEBOOK" target="_blank">
+                <span class="fb-icon"></span></a>
+                <a class="done__share hover" id="shareLINE" href="https://social-plugins.line.me/lineit/share?url=https://act.gp/3tywow9" title="分享至 LINE" target="_blank"> <span class="line-icon"></span></a>
+              </span>
+              <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12 line-share-section">
+                <h4 style="text-align: center;">
+                  <a href="http://act.gp/GPLINE_tp" target="_blank" class="line-link" style="color: #FFF9BE">加入我們的 LINE 好友</a>
+                </h4>
+                <div class="col-sm-10 col-sm-offset-1 col-xs-12 padding-ten">
+                  <img src="%PUBLIC_URL%/images/tp-line-qrcode.png" class="tp-line line-share-img" width="100%" alt="">
+                  <img src="%PUBLIC_URL%/images/tc-line-qrcode.png" class="tc-line line-share-img" width="100%" alt="">
+                  <img src="%PUBLIC_URL%/images/ks-line-qrcode.png" class="ks-line line-share-img" width="100%" alt="">
+                </div>
+              </div>
+              
             </p>
           </div>
         </div>
