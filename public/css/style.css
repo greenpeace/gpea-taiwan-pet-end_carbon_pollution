@@ -94,6 +94,14 @@ input[type="button"] {
   border: none;
   border-radius: 4px;
   letter-spacing: 0.125em;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: #FFB660;
+}
+.btn:active {
+  background-color: #E96D00;
 }
 .btn:hover {
   color: white;
@@ -547,10 +555,8 @@ input[type="button"] {
 }
 @media (max-width: 780px) {
   .kv__bar-des {
-    position: absolute;
-    top: 0;
-    right: 0;
     font-size: 3.46666667vw;
+    text-align: right;
   }
 }
 .kv__num {
@@ -1066,14 +1072,34 @@ input[type="button"] {
   padding: 0 1em;
   box-sizing: border-box;
   color: white;
-  background-color: #E97441;
+  background-color: #FF8100;
   border: none;
-  border-radius: 1.45em;
+  border-radius: 4px;
   letter-spacing: 0.125em;
   margin: 0 1.45em;
+  transition: all 0.3s;
+}
+.call__btn:hover {
+  background-color: #FFB660;
+}
+.call__btn:active {
+  background-color: #E96D00;
 }
 .call__btn--light {
-  background-color: #B3B39B;
+  background-color: transparent;
+  border: 1px solid #FF8100;
+  color: #E96D00;
+  box-sizing: border-box;
+}
+.call__btn--light:hover {
+  background-color: #FFB660;
+  border: 1px solid #FFB660;
+  color: white;
+}
+.call__btn--light:active {
+  background-color: #E96D00;
+  border: 1px solid #E96D00;
+  color: white;
 }
 @media (max-width: 1440px) {
   .call__btn {
@@ -1236,4 +1262,173 @@ input[type="button"] {
   .pc-hide {
     display: none!important;
   }
+}
+.lightbox {
+  width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 150;
+	display: none;
+}
+.bg-trasitonblack {
+	width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+	z-index: 50;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.lightbox__wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.lightbox__inner {
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  padding: 40px;
+  box-sizing: border-box;
+  z-index: 55;
+  margin-top: -50px;
+}
+@media (max-width: 780px) {
+  .lightbox__inner {
+    padding: 8vw 5vw 8vw 5vw;
+  }
+}
+.lightbox__title {
+  font-size: 2.16666667rem;
+  letter-spacing: 0.15em;
+  line-height: 1.46153846em;
+  color: #555555;
+}
+@media (max-width: 1440px) {
+  .lightbox__title {
+    font-size: 1.66666667rem;
+  }
+}
+@media (max-width: 780px) {
+  .lightbox__title {
+    font-size: 4vw;
+  }
+}
+.lightbox__text {
+  font-size: 1.66666667rem;
+  line-height: 1.8em;
+  letter-spacing: 0.15em;
+  color: #555555;
+}
+@media (max-width: 1440px) {
+  .lightbox__text {
+    font-size: 1.41666667rem;
+  }
+}
+@media (max-width: 780px) {
+  .lightbox__text {
+    font-size: 3.73333333vw;
+    letter-spacing: 0.085em;
+  }
+}
+.lightbox-close {
+	display: inline-block;
+	color: black;
+	font-size: 16px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: 10px;
+	top: 10px;
+	cursor: pointer;
+	z-index: 100;
+}
+.lightbox-close-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  z-index: 97;
+}
+.lightbox-close-icon::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  top: calc(50% - 1.5px);
+  background-color: black;
+  transform: rotate(45deg);
+  transition: all .3s ease;
+}
+.lightbox-close-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  top: calc(50% - 1.5px);
+  background-color: black;
+  transform: rotate(-45deg);
+  transition: all .3s ease;
+}
+.lightbox-close-icon:hover::before {
+  transform: rotate(225deg);
+}
+.lightbox-close-icon:hover::after {
+  transform: rotate(-225deg);
+}
+.lighbox-btnwrap {
+  display: block;
+  text-align: center;
+}
+.lighbox-btn {
+  display: inline-block;
+  min-width: 13.5em;
+  text-align: center;
+  font-size: 1.66666667rem;
+  line-height: 2.85em;
+  padding: 0 1em;
+  box-sizing: border-box;
+  color: white;
+  background-color: #FF8100;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 0.125em;
+  opacity: 1;
+  transition: all 0.3s;
+}
+.lighbox-btn:hover {
+  background-color: #FFB660;
+}
+.lighbox-btn:active {
+  background-color: #E96D00;
+}
+@media (max-width: 1440px) {
+  .lighbox-btn {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 780px) {
+  .lighbox-btn {
+    font-size: 4vw;
+    min-width: 10.53333333em;
+  }
+}
+.lighbox-btn:hover {
+  opacity: 0.8;
 }
