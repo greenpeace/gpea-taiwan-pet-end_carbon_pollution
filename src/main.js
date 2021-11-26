@@ -95,7 +95,7 @@ const initProgressBar = () => {
 
     // console.log("progress bar")
     // const goal = document.querySelector('[name="numSignupTarget"]').value;
-    let goal = (Math.floor(progressNow / 5000) + 1) * 5000;
+    let goal = (Math.floor(progressNow / 5000) + 2) * 5000;
     // console.log($('#mc-form'))
     // console.log(goal)
     // console.log(current)
@@ -114,13 +114,16 @@ const initProgressBar = () => {
 
 const initForm = () => {
 
-    //送出表單後
+    // 送出表單後
     // $('#submitForm').on('click', function (e) {
     //     //e.preventDefault();
     //     $('#signForm').hide();
     //     $('#signDone').fadeIn();
     //     $('html, body').scrollTop($('#signDone').offset().top);
     // });
+
+    // $('#signForm').hide();
+    // $('#signDone').fadeIn();
 
     console.log('init form')
     
@@ -132,6 +135,22 @@ const initForm = () => {
         let option = `<option value="${currYear-i}">${currYear-i}</option>`
         $("#birth-year").append(option);
     }
+
+    $.validator.addMethod(
+        "taiwan-phone",
+        function (value, element) {
+            
+            const phoneReg6 = new RegExp(/^(0|886|\+886)?(9\d{8})$/).test(value);
+            const phoneReg7 = new RegExp(/^(0|886|\+886){1}[3-8]-?\d{6,8}$/).test(value);
+            const phoneReg8 = new RegExp(/^(0|886|\+886){1}[2]-?\d{8}$/).test(value);
+
+            if ($('#mobile').val()) {
+                return (phoneReg6 || phoneReg7 || phoneReg8)
+            }
+            console.log('phone testing')
+            return true
+        },
+        "電話格式不正確，請只輸入數字 0912345678 和 02-23612351")
 
     $.validator.addClassRules({ // connect it to a css class
         "email": {email: true},
@@ -195,6 +214,8 @@ const initForm = () => {
                 sendPetitionTracking('2021-climate-government_set_carbon_price');
                 $('#signForm').hide();
                 $('#signDone').fadeIn();
+                // utm part
+
             }).catch((error) => {
                 console.log(error);
                 $(".loading-cover").fadeOut();
@@ -219,9 +240,6 @@ const initForm = () => {
         email: "Email 格式錯誤",
     });
 
-    function submitMCForm () {
-
-    }
 
     $("#submitForm").click(function () {
         console.log($('#visible-form'))
@@ -277,6 +295,39 @@ function init() {
         duration: 550,
         anchorPlacement: 'center-bottom'
     });
+
+    $(".line-share-section").hide();
+    // utm source
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("utm_source") === "dd") {
+        $(".line-share-section").show();
+        $(".hide-on-dd").hide();
+        $(".slider-typography").css("position", "relative");
+        $(".slider-typography").css("padding-top", "15%");
+        $(".line-share-img").hide();
+
+        switch (urlParams.get("utm_content")) {
+            case "tp":
+                $(".line-link").attr("href", "http://act.gp/GPLINE_tp");
+                $(".tp-line").show();
+                break;
+            case "tc":
+                $(".tc-line").show();
+                $(".line-link").attr("href", "http://act.gp/GPLINE_tc");
+                break;
+            case "ks":
+                $(".ks-line").show();
+                $(".line-link").attr("href", "http://act.gp/GPLINE_ks");
+                break;
+            default:
+                $(".tp-line").show();
+                $(".line-link").attr("href", "http://act.gp/GPLINE_tp");
+                break
+        }
+    } else {
+        $(".line-share-section").hide()
+    }
+
 }
 
 /**
