@@ -98,18 +98,12 @@ input[type="button"] {
   transition: all 0.3s;
 }
 .btn:hover {
+  color: white;
   background-color: #FFB660;
 }
 .btn:active {
-  background-color: #E96D00;
-}
-.btn:hover {
   color: white;
-  background-color: #ffb660;
-}
-.btn:active {
-  border: none;
-  background-color: #e96d00;
+  background-color: #E96D00;
 }
 @media (max-width: 1440px) {
   .btn {
@@ -1081,6 +1075,8 @@ input[type="button"] {
 }
 .call__btn:hover {
   background-color: #FFB660;
+  color: white!important;
+  text-decoration: none;
 }
 .call__btn:active {
   background-color: #E96D00;
@@ -1094,7 +1090,7 @@ input[type="button"] {
 .call__btn--light:hover {
   background-color: #FFB660;
   border: 1px solid #FFB660;
-  color: white;
+  color: white!important;
 }
 .call__btn--light:active {
   background-color: #E96D00;
