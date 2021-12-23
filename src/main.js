@@ -31,7 +31,8 @@ $(document).ready(function () {
     initProgressBar();
     
     // lightbox
-    $('.lightbox').fadeIn(100);
+    //$('.lightbox').fadeIn(100);
+    $('.lightbox').hide();
 
     $('.lightbox-close, .bg-trasitonblack').on("click",function(e){
       e.preventDefault();

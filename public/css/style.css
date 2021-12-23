@@ -1078,12 +1078,17 @@ input[type="button"] {
   letter-spacing: 0.125em;
   margin: 0 1.45em;
   transition: all 0.3s;
+  text-decoration: none;
 }
 .call__btn:hover {
   background-color: #FFB660;
+  color:#fff;
+  text-decoration: none;
 }
 .call__btn:active {
   background-color: #E96D00;
+  color:#fff;
+  text-decoration: none;
 }
 .call__btn--light {
   background-color: transparent;
